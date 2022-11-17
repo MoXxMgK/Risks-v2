@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SoilType>
+ <agricultur name="Многол.злак.травы (зел. масса)" id="214">
+    <ph>
+      <data level="5" value="0,73"/>
+      <data level="5,5" value="0,65"/>
+      <data level="10" value="0,55"/>
+    </ph>
+    <potassium>
+      <data level="200" value="1"/>
+      <data level="400" value="0,4"/>
+      <data level="600" value="0,13"/>
+      <data level="999" value="0,08"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Естественные сенакосы (зел. масса)" id="400">
+    <ph>
+      <data level="5" value="3,7"/>
+      <data level="5,5" value="0,95"/>
+      <data level="10" value="0,69"/>
+    </ph>
+    <potassium>
+      <data level="200" value="4,6"/>
+      <data level="400" value="4"/>
+      <data level="600" value="2,5"/>
+      <data level="999" value="1,5"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.травы (сено)" id="220">
+    <ph>
+      <data level="5" value="3,4"/>
+      <data level="5,5" value="3"/>
+      <data level="10" value="2,6"/>
+    </ph>
+    <potassium>
+      <data level="200" value="4,80"/>
+      <data level="400" value="1,8"/>
+      <data level="600" value="0,6"/>
+      <data level="999" value="0,4"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Естественные сенакосы (сено)" id="401">
+    <ph>
+      <data level="5" value="17"/>
+      <data level="5,5" value="4,4"/>
+      <data level="10" value="3,2"/>
+    </ph>
+    <potassium>
+      <data level="200" value="12"/>
+      <data level="400" value="9,9"/>
+      <data level="600" value="6,3"/>
+      <data level="999" value="3,7"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.травы (сенаж)" id="240">
+    <ph>
+      <data level="5" value="1,8"/>
+      <data level="5,5" value="1,6"/>
+      <data level="10" value="1,4"/>
+    </ph>
+    <potassium>
+      <data level="200" value="2,6"/>
+      <data level="400" value="0,94"/>
+      <data level="600" value="0,3"/>
+      <data level="999" value="0,2"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Естественные сенакосы (сенаж)" id="402">
+    <ph>
+      <data level="5" value="9,2"/>
+      <data level="5,5" value="2,4"/>
+      <data level="10" value="1,7"/>
+    </ph>
+    <potassium>
+      <data level="200" value="12"/>
+      <data level="400" value="9,9"/>
+      <data level="600" value="6,3"/>
+      <data level="999" value="3,7"/>
+    </potassium>
+  </agricultur>
+</SoilType>

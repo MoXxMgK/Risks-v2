@@ -1,0 +1,125 @@
+﻿<Page x:Class="Risks_v2.Views.PlantsProductionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Risks_v2.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PlantsProductionPage"
+      Background="White">
+  <Page.Resources>
+    <Style x:Key="FormText" TargetType="TextBlock" BasedOn="{StaticResource MaterialDesignHeadline5TextBlock}">
+      <Setter Property="Padding" Value="5 2"/>
+    </Style>
+    <Style x:Key="FormTextSmall" TargetType="TextBlock" BasedOn="{StaticResource MaterialDesignHeadline6TextBlock}">
+      <Setter Property="Padding" Value="5 2"/>
+      <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <Style x:Key="FormField" TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
+      <Setter Property="FontSize" Value="16"/>
+    </Style>
+    <Style x:Key="FormComboBox" TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignComboBox}">
+      <Setter Property="FontSize" Value="14"/>
+      <Setter Property="Padding" Value="10 2"/>
+    </Style>
+  </Page.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="3.5*" />
+    </Grid.ColumnDefinitions>
+    <!--Form-->
+    <Grid Grid.Column="0" x:Name="MainFormContainer">
+      <ScrollViewer>
+        <StackPanel>
+          <StackPanel Visibility="{Binding RegionVisibility}">
+            <TextBlock Text="Область" Style="{StaticResource FormText}"/>
+            <ComboBox Style="{StaticResource FormComboBox}" ItemsSource="{Binding Regions}"  SelectedItem="{Binding SelectedRegion}"/>
+          </StackPanel>
+          <StackPanel Visibility="{Binding DistrictsVisibility}">
+            <TextBlock Text="Район" Style="{StaticResource FormText}"/>
+            <ComboBox Style="{StaticResource FormComboBox}" ItemsSource="{Binding Districts}" SelectedItem="{Binding SelectedDistrict}"/>
+          </StackPanel>
+          <StackPanel Visibility="{Binding OrganisationsVisibility}">
+            <TextBlock Text="Организация" Style="{StaticResource FormText}"/>
+            <ComboBox Style="{StaticResource FormComboBox}" ItemsSource="{Binding Organizations}" SelectedItem="{Binding SelectedOrganization}"/>
+          </StackPanel>
+          <Button Content="Открыть файл" Command="{Binding OpenFileCommand}" Margin="10"/>
+          <TextBlock Text="Продукция" Style="{StaticResource FormText}"/>
+          <ItemsControl x:Name="AgriculturesContainer" ItemsSource="{Binding Products}">
+            <ItemsControl.ItemsPanel>
+              <ItemsPanelTemplate>
+                <WrapPanel Orientation="Vertical"/>
+              </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+              <DataTemplate>
+                <CheckBox Content="{Binding Name}" IsChecked="{Binding Checked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ItemsControl>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1*" />
+              <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Радионуклид:" Style="{StaticResource FormText}"/>
+            <CheckBox Grid.Column="1" Content="Cs" Style="{StaticResource MaterialDesignActionCheckBox}" IsChecked="{Binding PlantsNormative.CsNormative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <CheckBox Grid.Column="2" Content="Sr" Style="{StaticResource MaterialDesignActionCheckBox}" IsChecked="{Binding PlantsNormative.SrNormative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          </Grid>
+          <TextBlock Text="Допустимые уровни содержания радионкулидов в пищевой продукции" TextWrapping="Wrap" MaxWidth="300" Style="{StaticResource FormTextSmall}"/>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="2*" />
+              <ColumnDefinition Width="1*" />
+              <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Cs" Grid.Column="1" Style="{StaticResource FormText}"/>
+            <TextBlock Text="Sr" Grid.Column="2" Style="{StaticResource FormText}"/>
+          </Grid>
+          <Grid Margin="0 5">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="3*" />
+              <ColumnDefinition Width="1*" />
+              <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Зерно" Grid.Column="0" Style="{StaticResource FormTextSmall}"/>
+            <TextBox Grid.Column="1" Style="{StaticResource FormField}" Text="{Binding SeedsLevel.CsLevel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Column="2" Style="{StaticResource FormField}" Text="{Binding SeedsLevel.SrLevel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          </Grid>
+          <Grid Margin="0 5">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="3*" />
+              <ColumnDefinition Width="1*" />
+              <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Картофель" Grid.Column="0" Style="{StaticResource FormTextSmall}"/>
+            <TextBox Grid.Column="1" Style="{StaticResource FormField}" Text="{Binding PotatoesLevel.CsLevel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Column="2" Style="{StaticResource FormField}" Text="{Binding PotatoesLevel.SrLevel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          </Grid>
+          <Grid Margin="0 5">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="3*" />
+              <ColumnDefinition Width="1*" />
+              <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Овощи" Grid.Column="0" Style="{StaticResource FormTextSmall}"/>
+            <TextBox Grid.Column="1" Style="{StaticResource FormField}" Text="{Binding VegetablesLevel.CsLevel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Column="2" Style="{StaticResource FormField}" Text="{Binding VegetablesLevel.SrLevel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          </Grid>
+          <Button Content="Рассчитать" Margin="10" Visibility="{Binding CalculationButtonVisibility}" Command="{Binding CalculateCommand}"/>
+        </StackPanel>
+      </ScrollViewer>
+    </Grid>
+    <!--Output-->
+    <Grid x:Name="ResultDataContainer" Grid.Column="1">
+      <ScrollViewer VerticalScrollBarVisibility="Auto" Width="Auto">
+        <StackPanel x:Name="DataContainer">
+          
+        </StackPanel>
+      </ScrollViewer>
+    </Grid>
+  </Grid>
+</Page>

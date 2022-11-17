@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SoilType>
+  <agricultur name="Овес (зерно)" id="100">
+    <ph>
+      <data level="4,5" value="2,1"/>
+      <data level="5" value="1,7"/>
+      <data level="5,5" value="1,6"/>
+      <data level="6" value="1,5"/>
+      <data level="7" value="1,4"/>
+      <data level="13" value="1,3"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,33"/>
+      <data level="140" value="0,1"/>
+      <data level="200" value="0,08"/>
+      <data level="300" value="0,07"/>
+      <data level="999" value="0,05"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Оз рожь (зерно)" id="101">
+    <ph>
+      <data level="4,5" value="1,4"/>
+      <data level="5" value="1,3"/>
+      <data level="5,5" value="1,2"/>
+      <data level="6" value="1,1"/>
+      <data level="7" value="1"/>
+      <data level="13" value="0,7"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,05"/>
+      <data level="140" value="0,04"/>
+      <data level="200" value="0,03"/>
+      <data level="300" value="0,03"/>
+      <data level="999" value="0,01"/>
+    </potassium>
+  </agricultur>
+<agricultur name="ячмень (зерно)" id="103">
+    <ph>
+      <data level="4,5" value="2,7"/>
+      <data level="5" value="2,2"/>
+      <data level="5,5" value="1,9"/>
+      <data level="6" value="1,8"/>
+      <data level="7" value="1,7"/>
+      <data level="13" value="1,6"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,09"/>
+      <data level="140" value="0,08"/>
+      <data level="200" value="0,07"/>
+      <data level="300" value="0,04"/>
+      <data level="999" value="0,04"/>
+    </potassium>
+  </agricultur>
+<agricultur name="горох (зерно)" id="105">
+    <ph>
+      <data level="4,5" value="4,6"/>
+      <data level="5" value="4,3"/>
+      <data level="5,5" value="2,9"/>
+      <data level="6" value="2,7"/>
+      <data level="7" value="2,5"/>
+      <data level="13" value="2,5"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,72"/>
+      <data level="140" value="0,66"/>
+      <data level="200" value="0,53"/>
+      <data level="300" value="0,4"/>
+      <data level="999" value="0,21"/>
+    </potassium>
+  </agricultur>
+<agricultur name="картофель" id="110">
+    <ph>
+      <data level="4,5" value="0,6"/>
+      <data level="5" value="0,45"/>
+      <data level="5,5" value="0,36"/>
+      <data level="6" value="0,32"/>
+      <data level="7" value="0,2"/>
+      <data level="13" value="0,15"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,09"/>
+      <data level="140" value="0,08"/>
+      <data level="200" value="0,057"/>
+      <data level="300" value="0,04"/>
+      <data level="999" value="0,022"/>
+    </potassium>
+  </agricultur>
+<agricultur name="морковь " id="111">
+    <ph>
+      <data level="4,5" value="2,4"/>
+      <data level="5" value="2,3"/>
+      <data level="5,5" value="2,2"/>
+      <data level="6" value="2"/>
+      <data level="7" value="1,45"/>
+      <data level="13" value="1,22"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,07"/>
+      <data level="140" value="0,06"/>
+      <data level="200" value="0,045"/>
+      <data level="300" value="0,03"/>
+      <data level="999" value="0,016"/>
+    </potassium>
+  </agricultur>
+<agricultur name="свекла" id="112">
+    <ph>
+      <data level="4,5" value="2,1"/>
+      <data level="5" value="1,82"/>
+      <data level="5,5" value="1,4"/>
+      <data level="6" value="1,18"/>
+      <data level="7" value="0,9"/>
+      <data level="13" value="0,72"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,08"/>
+      <data level="140" value="0,07"/>
+      <data level="200" value="0,06"/>
+      <data level="300" value="0,038"/>
+      <data level="999" value="0,024"/>
+    </potassium>
+  </agricultur>
+<agricultur name="капуста" id="113">
+    <ph>
+      <data level="4,5" value="1,4"/>
+      <data level="5" value="1,3"/>
+      <data level="5,5" value="1,2"/>
+      <data level="6" value="1,05"/>
+      <data level="7" value="0,72"/>
+      <data level="13" value="0,65"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,09"/>
+      <data level="140" value="0,08"/>
+      <data level="200" value="0,07"/>
+      <data level="300" value="0,042"/>
+      <data level="999" value="0,017"/>
+    </potassium>
+  </agricultur>
+<agricultur name="лук" id="114">
+    <ph>
+      <data level="4,5" value="1,7"/>
+      <data level="5" value="1,6"/>
+      <data level="5,5" value="1,5"/>
+      <data level="6" value="1,42"/>
+      <data level="7" value="0,9"/>
+      <data level="13" value="0,55"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,08"/>
+      <data level="140" value="0,07"/>
+      <data level="200" value="0,062"/>
+      <data level="300" value="0,05"/>
+      <data level="999" value="0,035"/>
+    </potassium>
+  </agricultur>
+<agricultur name="овес (солома)" id="230">
+    <ph>
+      <data level="4,5" value="7,7"/>
+      <data level="5" value="6,7"/>
+      <data level="5,5" value="6"/>
+      <data level="6" value="5,5"/>
+      <data level="7" value="5,3"/>
+      <data level="13" value="5,1"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,68"/>
+      <data level="140" value="0,16"/>
+      <data level="200" value="0,08"/>
+      <data level="300" value="0,07"/>
+      <data level="999" value="0,04"/>
+    </potassium>
+  </agricultur>
+<agricultur name="ячмень (солома)" id="232">
+    <ph>
+      <data level="4,5" value="8,9"/>
+      <data level="5" value="8,7"/>
+      <data level="5,5" value="7,7"/>
+      <data level="6" value="6,8"/>
+      <data level="7" value="6,1"/>
+      <data level="13" value="5,8"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,16"/>
+      <data level="140" value="0,12"/>
+      <data level="200" value="0,07"/>
+      <data level="300" value="0,07"/>
+      <data level="999" value="0,07"/>
+    </potassium>
+  </agricultur>
+<agricultur name="оз.рожь (зел. масса)" id="210">
+    <ph>
+      <data level="4,5" value="2,2"/>
+      <data level="5" value="2,15"/>
+      <data level="5,5" value="1,83"/>
+      <data level="6" value="1,32"/>
+      <data level="7" value="1,2"/>
+      <data level="13" value="0,82"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,28"/>
+      <data level="140" value="0,14"/>
+      <data level="200" value="0,112"/>
+      <data level="300" value="0,07"/>
+      <data level="999" value="0,06"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Горохо-овсяная смесь (зел. масса)" id="217">
+    <ph>
+      <data level="4,5" value="6"/>
+      <data level="5" value="5,7"/>
+      <data level="5,5" value="4,8"/>
+      <data level="6" value="4"/>
+      <data level="7" value="3,1"/>
+      <data level="13" value="1,1"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,16"/>
+      <data level="140" value="0,1"/>
+      <data level="200" value="0,08"/>
+      <data level="300" value="0,07"/>
+      <data level="999" value="0,07"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Вика-овсяная смесь (зел. масса)" id="218">
+    <ph>
+      <data level="4,5" value="5"/>
+      <data level="5" value="4,4"/>
+      <data level="5,5" value="4,1"/>
+      <data level="6" value="3,6"/>
+      <data level="7" value="2,6"/>
+      <data level="13" value="1,8"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,13"/>
+      <data level="140" value="0,08"/>
+      <data level="200" value="0,07"/>
+      <data level="300" value="0,05"/>
+      <data level="999" value="0,04"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.травы (зел. масса)" id="214">
+    <ph>
+      <data level="4,5" value="4,4"/>
+      <data level="5" value="4"/>
+      <data level="5,5" value="3,4"/>
+      <data level="6" value="2,8"/>
+      <data level="7" value="2,7"/>
+      <data level="13" value="1,9"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,65"/>
+      <data level="140" value="0,55"/>
+      <data level="200" value="0,21"/>
+      <data level="300" value="0,2"/>
+      <data level="999" value="0,18"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.- боб. травы (зел. масса)" id="215">
+    <ph>
+      <data level="4,5" value="7,1"/>
+      <data level="5" value="6,9"/>
+      <data level="5,5" value="6,1"/>
+      <data level="6" value="4,8"/>
+      <data level="7" value="3,9"/>
+      <data level="13" value="3"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,33"/>
+      <data level="140" value="0,25"/>
+      <data level="200" value="0,17"/>
+      <data level="300" value="0,13"/>
+      <data level="999" value="0,12"/>
+    </potassium>
+  </agricultur>
+<agricultur name="кукуруза (зел. масса)" id="216">
+    <ph>
+      <data level="4,5" value="3"/>
+      <data level="5" value="2,6"/>
+      <data level="5,5" value="2,2"/>
+      <data level="6" value="1,9"/>
+      <data level="7" value="1,2"/>
+      <data level="13" value="0,7"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,1"/>
+      <data level="140" value="0,07"/>
+      <data level="200" value="0,07"/>
+      <data level="300" value="0,05"/>
+      <data level="999" value="0,04"/>
+    </potassium>
+  </agricultur>
+<agricultur name="кукуруза (силос)" id="250">
+    <ph>
+      <data level="4,5" value="4,17"/>
+      <data level="5" value="3,6"/>
+      <data level="5,5" value="3"/>
+      <data level="6" value="2,6"/>
+      <data level="7" value="1,5"/>
+      <data level="13" value="1"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,14"/>
+      <data level="140" value="0,1"/>
+      <data level="200" value="0,1"/>
+      <data level="300" value="0,069"/>
+      <data level="999" value="0,06"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.травы (сено)" id="220">
+    <ph>
+      <data level="4,5" value="21"/>
+      <data level="5" value="19"/>
+      <data level="5,5" value="16"/>
+      <data level="6" value="13"/>
+      <data level="7" value="13"/>
+      <data level="13" value="8,9"/>
+    </ph>
+    <potassium>
+      <data level="80" value="3"/>
+      <data level="140" value="2,6"/>
+      <data level="200" value="0,97"/>
+      <data level="300" value="0,94"/>
+      <data level="999" value="0,84"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.травы (сенаж)" id="240">
+    <ph>
+      <data level="4,5" value="11"/>
+      <data level="5" value="10"/>
+      <data level="5,5" value="8,6"/>
+      <data level="6" value="7,1"/>
+      <data level="7" value="6,7"/>
+      <data level="13" value="4,8"/>
+    </ph>
+    <potassium>
+      <data level="80" value="1,63"/>
+      <data level="140" value="1,4"/>
+      <data level="200" value="0,52"/>
+      <data level="300" value="0,5"/>
+      <data level="999" value="0,45"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.- боб. травы (сено)" id="221">
+    <ph>
+      <data level="4,5" value="35"/>
+      <data level="5" value="32"/>
+      <data level="5,5" value="29"/>
+      <data level="6" value="22"/>
+      <data level="7" value="18"/>
+      <data level="13" value="14"/>
+    </ph>
+    <potassium>
+       <data level="80" value="1,5"/>
+      <data level="140" value="1,2"/>
+      <data level="200" value="0,81"/>
+      <data level="300" value="0,6"/>
+      <data level="999" value="0,56"/>
+    </potassium>
+  </agricultur>
+<agricultur name="Многол.злак.- боб. травы (сенаж)" id="241">
+    <ph>
+      <data level="4,5" value="19"/>
+      <data level="5" value="17"/>
+      <data level="5,5" value="15"/>
+      <data level="6" value="12"/>
+      <data level="7" value="9,8"/>
+      <data level="13" value="7,5"/>
+    </ph>
+    <potassium>
+      <data level="80" value="0,82"/>
+      <data level="140" value="0,62"/>
+      <data level="200" value="0,43"/>
+      <data level="300" value="0,33"/>
+      <data level="999" value="0,3"/>
+    </potassium>
+  </agricultur>
+</SoilType>
