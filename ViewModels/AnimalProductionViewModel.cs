@@ -129,6 +129,23 @@ namespace Risks_v2.ViewModels
         public RadiationLevel MilkLevel { get; set; } = new RadiationLevel(100, 3.7);
         public RadiationLevel MeatLevel { get; set; } = new RadiationLevel(500);
 
+        private int _correctionYear;
+        public int CorrectionYear
+        {
+            get => _correctionYear;
+            set
+            {
+                int year = DateTime.Now.Year;
+                if (value > year)
+                {
+                    _correctionYear = year;
+                }
+                else
+                {
+                    _correctionYear = value;
+                }
+            }
+        }
         public Command CalculateCommand { get; set; }
 
         private readonly Dispatcher _dispatcher;
@@ -140,6 +157,8 @@ namespace Risks_v2.ViewModels
             _dispatcher = dispatcher;
 
             AnimalsNormative = new Normative();
+
+            _correctionYear = DateTime.Now.Year;
 
             CalculateCommand = new Command(CalculateResult);
 
@@ -241,8 +260,13 @@ namespace Risks_v2.ViewModels
                 {
                     Tuple<double, double> kp = KP.Instance.Get(cult.Id, row.SoilType, row.PH, row.Potassium);
 
-                    double qCs = Utils.Formula2(kp.Item1, row.Cs);
-                    double qSr = Utils.Formula2(kp.Item2, row.Sr);
+                    int currYear = DateTime.Now.Year;
+
+                    double actCs = row.Cs * Math.Exp((-0.693 * (currYear - _correctionYear)) / 30.16);
+                    double actSr = row.Sr * Math.Exp((-0.693 * (currYear - _correctionYear)) / 29.12);
+
+                    double qCs = Utils.Formula2(kp.Item1, actCs);
+                    double qSr = Utils.Formula2(kp.Item2, actSr);
 
                     AgricultureBase? copy = Utils.GetCopy(cult);
 

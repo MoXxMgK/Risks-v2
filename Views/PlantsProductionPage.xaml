@@ -69,6 +69,14 @@
             <CheckBox Grid.Column="1" Content="Cs" Style="{StaticResource MaterialDesignActionCheckBox}" IsChecked="{Binding PlantsNormative.CsNormative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <CheckBox Grid.Column="2" Content="Sr" Style="{StaticResource MaterialDesignActionCheckBox}" IsChecked="{Binding PlantsNormative.SrNormative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
           </Grid>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="3*" />
+              <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Распад?" Grid.Column="0" Style="{StaticResource FormText}"/>
+            <TextBox Grid.Column="1" Text="{Binding CorrectionYear, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormField}"/>
+          </Grid>
           <TextBlock Text="Допустимые уровни содержания радионкулидов в пищевой продукции" TextWrapping="Wrap" MaxWidth="300" Style="{StaticResource FormTextSmall}"/>
           <Grid>
             <Grid.ColumnDefinitions>

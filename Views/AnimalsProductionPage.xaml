@@ -98,6 +98,14 @@
             <ComboBox Grid.Row="6" Grid.Column="1" ItemsSource="{Binding RootsItems}" SelectedItem="{Binding SelectedRoots}" Style="{StaticResource FormComboBox}" VerticalAlignment="Stretch"/>
             <TextBox Grid.Row="6" Grid.Column="2" Margin="5 0 0 0" Text="{Binding SelectedRoots.Quantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormField}"/>
           </Grid>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="3*" />
+              <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Распад?" Grid.Column="0" Style="{StaticResource FormText}"/>
+            <TextBox Grid.Column="1" Text="{Binding CorrectionYear, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormField}"/>
+          </Grid>
           <TextBlock Text="Допустимые уровни" Style="{StaticResource FormText}"/>
           <Grid>
             <Grid.ColumnDefinitions>

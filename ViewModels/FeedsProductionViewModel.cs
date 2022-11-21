@@ -72,6 +72,24 @@ namespace Risks_v2.ViewModels
         public RadiationLevel SilosLevel { get; set; }
         public RadiationLevel PotatoesLevel { get; set; }
 
+        private int _correctionYear;
+        public int CorrectionYear
+        {
+            get => _correctionYear;
+            set
+            {
+                int year = DateTime.Now.Year;
+                if (value > year)
+                {
+                    _correctionYear = year;
+                }
+                else
+                {
+                    _correctionYear = value;
+                }
+            }
+        }
+
         public Command CalculateCommand { get; set; }
 
         public event Action<List<System.Windows.Media.Visual>>? OnDataDisplayReady;
@@ -94,6 +112,8 @@ namespace Risks_v2.ViewModels
             SenageLevel = new RadiationLevel(500, 100);
             SilosLevel = new RadiationLevel(240, 50);
             PotatoesLevel = new RadiationLevel(160, 37);
+
+            _correctionYear = DateTime.Now.Year;
 
             CalculateCommand = new Command(CalculateResult);
 
@@ -181,8 +201,13 @@ namespace Risks_v2.ViewModels
                     {
                         Tuple<double, double> kp = KP.Instance.Get(agriculture.Id, f.SoilType, f.PH, f.Potassium);
 
-                        double qCs = Utils.Formula2(kp.Item1, f.Cs);
-                        double qSr = Utils.Formula2(kp.Item2, f.Sr);
+                        int currYear = DateTime.Now.Year;
+
+                        double actCs = f.Cs * Math.Exp((-0.693 * (currYear - _correctionYear)) / 30.16);
+                        double actSr = f.Sr * Math.Exp((-0.693 * (currYear - _correctionYear)) / 29.12);
+
+                        double qCs = Utils.Formula2(kp.Item1, actCs);
+                        double qSr = Utils.Formula2(kp.Item2, actSr);
 
                         AgricultureBase? newCulture = Utils.GetCopy(agriculture);
 
